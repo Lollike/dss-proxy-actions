@@ -63,11 +63,6 @@ interface GemJoinLike {
     function exit(address, uint) external;
 }
 
-interface GNTJoinLike {
-    function bags(address) external view returns (address);
-    function make(address) external returns (address);
-}
-
 interface DaiJoinLike {
     function vat() external returns (VatLike);
     function dai() external returns (GemLike);
@@ -110,7 +105,7 @@ interface ProxyLike {
 
 interface AutoLineLike {
     function ilks(bytes32) external view returns (uint256, uint256, uint48, uint48, uint48);
-    function exec(bytes32 _ilk) external returns (uint256);
+    function exec(bytes32) external returns (uint256);
 }
 
 interface Changelog {
